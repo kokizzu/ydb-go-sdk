@@ -25,12 +25,12 @@ func TestDeclaration(t *testing.T) {
 				))
 			},
 			exp: strings.Join([]string{
-				"DECLARE $foo AS \"String\";",
-				"DECLARE $bar AS \"Int64\";",
-				"DECLARE $baz AS \"Struct<" +
+				"DECLARE $foo AS String;",
+				"DECLARE $bar AS Int64;",
+				"DECLARE $baz AS Struct<" +
 					"foo:String," +
 					"bar:Int64," +
-					"baz:Tuple<String,Int64>>\";",
+					"baz:Tuple<String,Int64>>;",
 				"",
 			}, "\n"),
 		},

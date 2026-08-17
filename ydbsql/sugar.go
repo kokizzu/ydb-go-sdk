@@ -23,7 +23,7 @@ func (d *Declaration) String() string {
 func (d *Declaration) Declare(name string, t ydb.Type) {
 	d.buf.WriteString("DECLARE $")
 	d.buf.WriteString(name)
-	d.buf.WriteString(" AS \"")
+	d.buf.WriteString(" AS ")
 	internal.WriteTypeStringTo(&d.buf, t)
-	d.buf.WriteString("\";\n")
+	d.buf.WriteString(";\n")
 }
